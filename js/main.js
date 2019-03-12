@@ -24,8 +24,9 @@
     var index = 0;//當前播放圖片下標   
     var timer;//定時器
 
+
+    var imgWidth = document.documentElement.clientWidth * (document.documentElement.clientWidth < 768 ? 1 : 0.9 ) 
     //將圖片大小設置成螢幕大小90%
-    var imgWidth = document.documentElement.clientWidth * 90 / 100;
     for (var i = 0; i < imgArr.length; i++) {
         imgArr[i].style.width = imgWidth + 'px'
         imgArr[i].style.height = 'auto'
