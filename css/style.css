@@ -1,0 +1,586 @@
+/*******公共樣式*********/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: Helvetica, Arial, "微軟正黑體", sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/*******greet*********/
+
+.greet {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    overflow: hidden;
+    text-shadow: 2px 2px 2px #555;
+    background-color: rgba(255, 255, 255, .6);
+    animation-name: fadeInAndOut;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fadeInAndOut {
+    from {
+        opacity: 0.8;
+        bottom: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 15%;
+    }
+}
+
+.greet .title {
+    margin-top: 100px;
+}
+
+.greet .scroll-up {
+    position: absolute;
+    display: block;/*增大可觸面積*/
+    left: 50%;
+    bottom: 10%;
+    font-size: 6rem;
+    padding: 5rem;
+    text-shadow: 0px 0px 5px #222;
+    animation-name: fadeBigAndSmall;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fadeBigAndSmall {
+    from {
+        transform: translateX(-50%) rotate(-90deg) scale(1.1)
+    }
+    to {
+        transform: translateX(-50%) rotate(-90deg) scale(1)
+    }
+}
+
+.greet .scroll-up:hover {
+    cursor: pointer;
+
+}
+
+/*******輪播圖*********/
+
+.slider {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider .imgList {
+    position: absolute;
+}
+
+.slider .imgList li {
+    float: left;
+}
+
+.slider .navigator {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.slider .navigator a {
+    float: left;
+    width: 25px;
+    height: 5px;
+    margin: 0 3px;
+    background-color: #ccc;
+    opacity: .5;
+    transition: .2s
+}
+
+.slider .navigator a:hover {
+    background-color: black;
+}
+
+/********nav********/
+
+.sticky {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .about-me {
+    padding-top: 40px
+}
+
+.menu {
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.menu .logo {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+}
+
+.menu img {
+    height: 20px;
+    vertical-align: -3px;
+    padding: 0 1rem;
+}
+
+.menu ul {
+    float: right;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    padding: 0 2rem;
+}
+
+/********about me********/
+
+.about-me {
+    width: 100%;
+    position: relative;
+    background-color: #296983;
+    overflow: hidden;
+    /*開啟bfc*/
+}
+
+.about-me .photo {
+    float: left;
+    margin: 20vh 5vw;
+    width: 25vw;
+    height: 25vw;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, .3);
+    background-image: url('../img/profile.jpg');
+    background-position: -3px 0px;
+    background-size: cover;
+    transition: .3s;
+}
+
+.about-me .photo:hover {
+    border-radius: 0;
+    height: 34.5vw;
+}
+
+.about-me .intro h3 {
+    font-size: 3rem;
+    line-height: 2
+}
+
+.about-me .intro {
+    float: left;
+    width: 60vw;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20vh 5vw;
+    line-height: 1.5
+}
+
+/********experience********/
+
+.experience {
+    box-sizing: border-box;
+    padding: 10vh 5vw;
+    height: 100%;
+    font-size: 2.0rem;
+    line-height: 2;
+    background-color: #eee;
+}
+
+.experience .title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.experience .content {
+    position: relative;
+    margin-left: 3rem;
+}
+
+.experience .content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #555;
+}
+
+.experience .place {
+    margin-left: 3rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    width: 80%;
+}
+
+.experience .place::before {
+    content: "";
+    position: absolute;
+    margin-left: -53.5px;
+    margin-top: 15px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 2px solid #555;
+}
+
+.experience span {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.experience .job {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    list-style-type: disc;
+}
+
+.experience .job p {
+    padding-left: 2rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1
+}
+
+.experience .study {
+    float: right;
+    width: 50%;
+}
+
+.experience .work {
+    float: right;
+    width: 50%;
+    margin-right: -30px;
+}
+
+/*.experience .highschool{
+    position: absolute;
+    left: -100%;
+    bottom: 0%;
+}*/
+
+/*.experience .highschool::before{
+    margin-left: 300px;
+    color: #e9c2ff
+}*/
+
+/********skill***********/
+.ability{
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 3rem;
+}
+.ability h2{
+    font-size: 2.6rem;
+    padding: 2rem 0;
+}
+
+.skill {
+    float: left;
+    text-align: center;
+    width: 55%;
+}
+
+.ability .language {
+    width: 45%;
+    float: right;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: center;
+}
+.ability .lang-wrap {
+    padding: .8rem 0;
+}
+.ability .language .lang {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.ability .language .svg {
+    display: inline-block;
+    width: 60%;
+    height: 15px;
+}
+.ability .others {
+    width: 45%;
+    float: right;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.ability .others .software{
+    text-align: left;
+    display: inline-block;
+}
+
+.ability .others b {
+    padding: 0 1rem;
+    vertical-align: middle;
+}
+.ability .others .wp {
+    display: inline-block;
+    width: 26px;
+    height: 26px; 
+    background-image: url('../img/WordPress.png');
+    vertical-align: middle;
+    background-size: cover;
+}
+.ability .others .adobe {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background-image: url('../img/adobe.png');
+    vertical-align: middle;
+}
+
+.ability .others li:nth-child(2) span{
+    background-position: 0px -5px;
+}
+.ability .others li:nth-child(3) span{
+    background-position: -90px -5px;
+}
+.ability .others li:nth-child(4) span{
+    background-position: -119px -5px;
+}
+.ability .others li:nth-child(5) span{
+    background-position: -149px -5px;
+}
+.ability .others li:nth-child(6) span{
+    background-position: -30px -34px;
+}
+
+
+
+
+/**********works*********/
+.works {
+    text-align: center;
+    padding-top: 2rem;
+}
+.works h2{
+    font-size: 2.6rem;
+    line-height: 2;
+}
+.work {
+    display: inline-block;
+}
+
+.scene {
+    width: 300px;
+    height: 200px;
+    margin: 30px 30px 20px ;
+    perspective: 400px;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-50px);
+    transition: transform 3s;
+}
+
+.scene:hover .box {
+    transform: translateZ( -50px) rotateY(-180deg);
+}
+
+.box-face {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    background-color: #555;
+}
+.box-face i {
+    display: block;
+    text-align: left;
+    padding: 1rem;
+}
+
+.box-face--front, .box-face--back {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc
+}
+
+.box-face--right, .box-face--left {
+    width: 10px;
+    height: 200px;
+    left: 145px;
+    line-height: 200px;
+}
+
+.box-face--top, .box-face--bottom {
+    width: 300px;
+    height: 10px;
+    top: 95px;
+}
+
+.box-face--front {
+    transform: rotateY( 0deg) translateZ( 5px);
+}
+
+.box-face--back {
+    transform: rotateY(180deg) translateZ( 5px);
+}
+
+.box-face--right {
+    transform: rotateY( 90deg) translateZ(150px);
+}
+
+.box-face--left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.box-face--top {
+    transform: rotateX( 90deg) translateZ(100px);
+}
+
+.box-face--bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+label {
+    margin-right: 10px;
+}
+
+#ajax .box-face--front{
+    background-image: url('../img/work1.png');
+    background-size: cover;
+    background-position: center
+}
+
+#mininote .box-face--front{
+    background-image: url('../img/work2.png');
+    background-size: cover;
+    background-position: center
+}
+
+#bootstrap .box-face--front{
+    background-image: url('../img/work3.png');
+    background-size: cover;
+    background-position: center
+}
+
+#financial .box-face--front{
+    background-image: url('../img/work5.png');
+    background-size: cover;
+    background-position: center
+}
+
+#meizui .box-face--front{
+    background-image: url('../img/work4.png');
+    background-size: cover;
+    background-position: center
+}
+
+#mywebsite .box-face--front{
+    background-image: url('../img/work6.png');
+    background-size: cover;
+    background-position: center
+}
+.work h1 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    line-height: 2;
+    color: 
+}
+
+/********footer*******/
+footer {
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: rgb(214, 150, 150);
+    text-align:center; 
+}
+footer h2{
+    font-size: 2.6rem;
+    line-height: 2;
+}
+
+footer .photo {
+    margin: 2rem 0;
+    display: inline-block;
+    background: url("../img/profile2.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+footer .icon {
+    text-align: left;
+    display: inline-block;
+    height: 150px;
+    vertical-align: middle;
+}
+footer .icon .container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer .icon a {
+     font-size: 1.6rem;
+     text-decoration: none;
+     color: #222;
+}
+footer .icon i {
+    font-size: 2.6rem;
+    padding: 0 2rem;
+}

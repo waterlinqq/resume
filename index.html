@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Water Lin Personal Website</title>
+    <!-- mobile setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- browser support -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-control" content="public" />
+    <!-- SEO -->
+    <meta name="author" content="Water Lin" />
+    <meta name="copyright" content="Water Lin" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="distribution" content="Taiwan" />
+    <meta name="robots" content="all" />
+    <!-- share -->
+    <meta property="og:title" content="Billy 個人網站" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- link css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- greet -->
+    <div class="greet">
+        <h1 class="title">Hello! I'm Water Lin</h1>
+        <h2>Welcome to my page</h2>
+        <span class="scroll-up">&#187</span>
+    </div>
+    <!-- 輪播圖 -->
+    <div class="slider">
+        <ul class="imgList">
+            <li><img src="./img/slider1.jpg" alt="" /></li>
+            <li><img src="./img/slider2.jpg" alt="" /></li>
+            <li><img src="./img/slider3.jpg" alt="" /></li>
+            <li><img src="./img/slider4.jpg" alt="" /></li>
+            <li><img src="./img/slider1.jpg" alt="" /></li>
+        </ul>
+        <div class="navigator">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <!-- menu -->
+    <nav class="menu clearfix">
+        <a href="#" class="logo"><img src="./img/logo.png" title="index.html">WATER DESIGN</a>
+        <ul>
+            <li><a href="#s1" onclick="anchorTo('s1'); return false;">關於我</a></li>
+            <li><a href="#s2" onclick="anchorTo('s2'); return false;">學經歷</a></li>
+            <li><a href="#s3" onclick="anchorTo('s3'); return false;">能力表</a></li>
+            <li><a href="#s4" onclick="anchorTo('s4'); return false;">作品集</a></li>
+            <li><a href="#s5" onclick="anchorTo('s5'); return false;">連絡資訊</a></li>
+        </ul>
+    </nav>
+    <!-- about me -->
+    <section id="s1" class="about-me clearfix">
+        <div class="photo">
+
+        </div>
+        <div class="intro">
+            <h3>簡介</h3>
+            <p>您好！我是林士緯，84年次，畢業於國立台灣藝術大學，主修廣播電視學系。自從去年6月開始學習前端，扣除兵役四個月，至今其實接觸不到半年。前端對於我就像是美麗的陷阱，一不小心就越陷越深無法自拔，前端更是技術與藝術的結晶，我希望能夠成為一名工程師，不斷朝「前端」邁進！
+            </p>
+        </div>
+    </section>
+    <!-- ability -->
+    <section id="s2" class="ability clearfix">
+        <div class="skill">
+            <h2>技能程度</h2>
+            <canvas class="chart" width="400" height="200"></canvas>
+        </div>
+        <div class="language">
+            <h2>語言</h2>
+            <div class="lang-wrap">
+                <span class="lang">中文</span>
+                <svg class="svg">
+                    <rect x="5%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="25%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="45%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="65%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="85%" y="0" width="15%" height="15" fill="rgb(150, 150, 150)" />
+                </svg>
+            </div>
+            <div class="lang-wrap">
+                <span class="lang">英文</span>
+                <svg class="svg">
+                    <rect x="5%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="25%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="45%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="65%" y="0" width="15%" height="15" fill="rgb(150, 150, 150)" />
+                    <rect x="85%" y="0" width="15%" height="15" fill="rgb(150, 150, 150)" />
+                </svg>
+            </div>
+            <div class="lang-wrap">
+                <span class="lang">台語</span>
+                <svg class="svg">
+                    <rect x="5%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="25%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="45%" y="0" width="15%" height="15" fill="rgb(60, 255, 0)" />
+                    <rect x="65%" y="0" width="15%" height="15" fill="rgb(150, 150, 150)" />
+                    <rect x="85%" y="0" width="15%" height="15" fill="rgb(150, 150, 150)" />
+                </svg>
+            </div>
+
+        </div>
+        <div class="others">
+            <h2>其他</h2>
+            <ul class="software">
+                <li><span class="wp"></span><b>WordPress</b>使用WP架設網站經驗</p>
+                </li>
+                <li><span class="adobe"></span><b>Adobe Photoshop&nbsp;</b>圖像編輯合成技術</li>
+                <li><span class="adobe"></span><b>Adobe Premiere&nbsp;&nbsp;</b>影像剪輯後製處理</li>
+                <li><span class="adobe"></span><b>Adobe Indesign&nbsp;&nbsp;</b>印刷排版校對技能</li>
+                <li><span class="adobe"></span><b>Adobe Audition&nbsp;&nbsp;</b>聲音混音剪輯微調</li>
+                <li><span class="adobe"></span><b>Adobe Illustrator</b>平面圖型設計能力</li>
+            </ul>
+
+
+        </div>
+    </section>
+    <!-- experience -->
+    <section id="s3" class="experience ">
+        <div class="study">
+            <p class="title">學歷</p>
+            <ul class="content">
+                <li class="place">國立台灣藝術大學<span>(2014/09-2018/06)</span>
+                    <ul>
+                        <li class="job">畢業展覽 網管組組長
+                            <p>架設畢展推廣網站</p>
+                        </li>
+                        <li class="job">系學會美編組 組長
+                            <p>廣告文宣品設計、印刷</p>
+                        </li>
+                        <li class="job">台藝大觀報 總編輯
+                            <p>文章編輯校對，報紙排版設計</p>
+                        </li>
+                        <li class="job">台藝之聲網路電台 新聞主播
+                            <p>新聞專題製作。播報電視新聞</p>
+                        </li>
+                        <li class="job">台藝之聲教育光播電台 主持人
+                            <p>主持節目《寵物完全攻略》</p>
+                        </li>
+                        <li class="job">數位媒體匯流社 採訪組長
+                            <p>採訪文章編輯校對 發行校刊</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="place highschool">台南市立第一高級中學<span>(2010/09-2014/06)</span>
+                </li>
+            </ul>
+        </div>
+        <div class="work">
+            <p class="title">兼職</p>
+            <ul class="content">
+                <li class="place">紅布朗國際有限公司<span>(2016/10-2018/08)</span>
+                    <ul>
+                        <li class="job">試吃銷售員
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <br>
+                <li class="place">洋城義大利麵餐廳<span>(2016/07-2016/10)</span>
+                    <ul>
+                        <li class="job">外場服務生
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- works -->
+    <section id="s4"class="works ">
+        <h2>作品集</h2>
+        <div id="ajax" class="work">
+            <div class="scene">
+                <a href="">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">AJAX</i>
+                            <i class="fas fa-tag">localstorage</i>
+                            <i class="fas fa-tag">Googel API</i>
+                            <i class="fas fa-tag">RWD</i>
+                            <i class="fas fa-tag">VanillaJS</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>AJAX練習 台灣公共藝術查詢系統</h3>
+            </div>
+        </div>
+        <div id="mininote" class="work">
+            <div class="scene">
+                <a href="https://waterlinqq.github.io/mininote/">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">store.js</i>
+                            <i class="fas fa-tag">CSS FLEX</i>
+                            <i class="fas fa-tag">HTML5</i>
+                            <i class="fas fa-tag">jQuery</i>
+                            <i class="fas fa-tag">customize alert</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>LocalStorage練習 mininote</h3>
+            </div>
+        </div>
+        <div id="bootstrap" class="work">
+            <div class="scene">
+                <a href="https://waterlinqq.github.io/bootstrap-restaurant">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">Bootstrap</i>
+                            <i class="fas fa-tag">form validation</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>Bootstrap練習 西餐廳</h3>
+            </div>
+        </div>
+        <div id="meizui" class="work">
+            <div class="scene">
+                <a href="https://waterlinqq.github.io/meizuiphone/">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">fullpage.js</i>
+                            <i class="fas fa-tag">jQuery</i>
+                            <i class="fas fa-tag">CSS3</i>
+                            <i class="fas fa-tag">RWD</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>fullpage練習 Meizui手機</h3>
+            </div>
+        </div>
+        <div id="financial" class="work">
+            <div class="scene">
+                <a href="https://waterlinqq.github.io/financialManagementWebsite/">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">OwlCarousell</i>
+                            <i class="fas fa-tag">CSS sprite</i>
+                            <i class="fas fa-tag">HTML5 picture</i>
+                            <i class="fas fa-tag">RWD</i>
+                            <i class="fas fa-tag">npm</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>RWD練習 財務管理網站</h3>
+            </div>
+        </div>
+        <div id="mywebsite" class="work">
+            <div class="scene">
+                <a href="https://waterlinqq.github.io/financialManagementWebsite/">
+                    <div class="box">
+                        <div class="box-face box-face--front"></div>
+                        <div class="box-face box-face--back">
+                            <i class="fas fa-tag">chart.js</i>
+                            <i class="fas fa-tag">HTML5 SVG</i>
+                            <i class="fas fa-tag">CSS3 animation</i>
+                            <i class="fas fa-tag">CSS3 3D</i>
+                            <i class="fas fa-tag">RWD</i>
+                        </div>
+                        <div class="box-face box-face--right"></div>
+                        <div class="box-face box-face--left"></div>
+                        <div class="box-face box-face--top"></div>
+                        <div class="box-face box-face--bottom"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="intro">
+                <h3>個人介紹網站</h3>
+            </div>
+        </div>
+    </section>
+    <footer id="s5">
+        <h2>聯絡我</h2>
+        <div class="photo">
+        </div>
+        <div class="icon">
+            <div class="container">
+                <a href="https://github.com/waterlinqq"><i class="fab fa-github"></i>GitHub</a>
+                <a><i class="fas fa-envelope"></i>a10311036@gmail.com</a>
+                <a><i class="fas fa-mobile-alt"></i>0938-266-070</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="js/tools.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
