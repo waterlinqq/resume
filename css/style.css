@@ -60,12 +60,16 @@ body {
 }
 
 .greet .title {
+    display: inline-block;
     margin-top: 100px;
+}
+.greet h2{
+    display: inline-block;
 }
 
 .greet .scroll-up {
     position: absolute;
-    display: block;/*增大可觸面積*/
+    display: block; /*增大可觸面積*/
     left: 50%;
     bottom: 10%;
     font-size: 6rem;
